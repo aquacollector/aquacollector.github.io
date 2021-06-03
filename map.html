@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+    <script src="https://api.mapy.cz/loader.js"></script>
+	<script>Loader.lang = "pl"; Loader.load()</script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="m"></div>
+    <script>
+        var center = SMap.Coords.fromWGS84(12.1746536, 42.3180781);
+        var m = new SMap(JAK.gel("m"), center, 13);
+        m.addDefaultLayer(SMap.DEF_BASE).enable();
+        m.addDefaultControls();
+
+        var layer = new SMap.Layer.Marker();
+        m.addLayer(layer);
+        layer.enable();
+
+        var options = {};
+        var marker = new SMap.Marker(center, "Aquacollector location", options);
+        layer.addMarker(marker);
+    </script>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyCQv8ET4kFkI0hr5luI8Qn3dh0Q2jIAdgo",
+        authDomain: "aquacollector-database.firebaseapp.com",
+        projectId: "aquacollector-database",
+        storageBucket: "aquacollector-database.appspot.com",
+        messagingSenderId: "487430716655",
+        appId: "1:487430716655:web:844d1819a40c2150aa6f1a"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+</body>
+</html>
