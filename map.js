@@ -12,7 +12,7 @@ firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore();
 
 const docRef = firestore.doc("aquacollector-data/pi-data");
-var latitude = 20;
+var latitude = 0;
 var longitude = 0;
 
 docRef.get().then((doc) => {
