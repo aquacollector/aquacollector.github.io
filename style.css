@@ -8,6 +8,7 @@
     background: linear-gradient(rgba(0,0,0,0.5), #eba434), url(Images/banner.jpg);
     background-size: cover;
     background-position: center;
+    width: 100%;
     height: 100vh;
 }
 
@@ -18,17 +19,18 @@
 }
 
 .banner-text h1{
-    font-size: 130px;
+    font-size: 10vmin;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
+    box-sizing: border-box;
 }
 
 .banner-text p{
-    font-size: 20px;
+    font-size: 3vmin;
 }
 
 .download-app-btn{
-    margin: 70px auto 0;
+    margin: 30px auto 0;
 }
 
 .download-app-btn a{
@@ -62,7 +64,6 @@
 .download-app-btn a:hover{
     color: black;
 }
-
 
 
 @font-face {
