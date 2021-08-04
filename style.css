@@ -29,11 +29,12 @@
     font-size: 3vmin;
 }
 
-.download-app-btn{
+.download-btn{
     margin: 30px auto 0;
+    padding-bottom: 50px;
 }
 
-.download-app-btn a{
+.download-btn a{
     width: 200px;
     text-decoration: none;
     display: inline-block;
@@ -46,7 +47,7 @@
     transition: color 0.5s;
 }
 
-.download-app-btn a span{
+.download-btn a span{
     width: 0%;
     height: 100%;
     position: absolute;
@@ -57,11 +58,11 @@
     transition: 0.5s;
 }
 
-.download-app-btn a:hover span{
+.download-btn a:hover span{
     width: 100%;
 }
 
-.download-app-btn a:hover{
+.download-btn a:hover{
     color: black;
 }
 
